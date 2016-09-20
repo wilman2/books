@@ -26,9 +26,7 @@ module.exports = function (stockRepository) {
             }
         );
     }
-
-    var url = process.env.MONGODB_URI || 'mongodb://localhost:27017/book_inventory_service';
-
+    
     app.post('/stock', function (req, res, next) {
         stockRepository.
             stockUp(req.body.isbn, req.body.count).
