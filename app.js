@@ -50,7 +50,23 @@ module.exports = function (stockRepository) {
             getCount(req.params.isbn).
             then(function (result) {
                 if (result) {
-                    res.json({count: result});
+                    // res.json({count: result});
+
+                    res.format({
+                        'text/plain': function(){
+                            res.send(result);
+                        },
+
+                        'application/json': function(){
+                            res.json({count: result});
+                        },
+
+                        'default': function() {
+                            res.send('<div>Copies left:' + result +'</div>');
+                        }
+                    });
+
+
                 } else {
                     res.status(404).send('No book with isbn ' + req.params.isbn);
                 }
