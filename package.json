@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {"node": "4.0.0"},
   "scripts": {
-    "start": "node server.js",
+    "start": "node lib/server.js",
     "test": "mocha",
-    "lint": "jshint --exclude=node_modules/** ./",
+    "lint": "jshint --exclude=node_modules lib/",
     "test:xunit": "npm run test -- --reporter xunit"
   },
   "author": "",
@@ -20,8 +19,10 @@
   "devDependencies": {
     "heroin-js": "1.12.2",
     "jshint": "2.9.3",
-    "jslint": "0.10.3",
     "mocha": "3.0.2",
     "supertest": "2.0.0"
+  },
+  "engines": {
+    "node": "4.5.0"
   }
 }
