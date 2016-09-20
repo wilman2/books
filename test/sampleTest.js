@@ -15,17 +15,17 @@ var app = require('../index.js');
 //    })
 // });
 
-describe('POST /stock', function() {
-    it('Stock should return received data in json', function(done) {
-        request(app)
-            .post('/stock')
-            .send({
-                isbn: '111',
-                count: 10
-            })
-            .expect(200, {
-                isbn: '111',
-                count: 10
-            }, done);
-    });
-});
+// describe('POST /stock', function() {
+//     it('Stock should return received data in json', function(done) {
+//         request(app)
+//             .post('/stock')
+//             .send({
+//                 isbn: '111',
+//                 count: 10
+//             })
+//             .expect(200, {
+//                 isbn: '111',
+//                 count: 10
+//             }, done);
+//     });
+// });
