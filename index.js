@@ -26,7 +26,7 @@ function serverError(err, req, res, next) {
 }
 
 app.get('/', logIncoming, function (req, res) {
-    res.send('Hello World');
+    res.send('Hello World! oneone');
 });
 
 app.post('/stock', function (req, res) {
