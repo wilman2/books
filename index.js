@@ -26,7 +26,7 @@ function serverError(err, req, res, next) {
 }
 
 app.get('/', logIncoming, function (req, res) {
-    res.send('Hello World! oneone');
+    res.send('Hello World pipeline test');
 });
 
 app.post('/stock', function (req, res) {
