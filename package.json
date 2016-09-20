@@ -5,7 +5,7 @@
   "main": "index.js",
   "engines": {"node": "4.0.0"},
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "test": "mocha",
     "lint": "jshint --exclude=node_modules/** ./",
     "test:xunit": "npm run test -- --reporter xunit"

@@ -37,6 +37,7 @@ module.exports = function (stockRepository) {
     });
 
     app.get('/stock', function (req, res, next) {
+        console.log('dasdasdas');
         stockRepository.
             findAll().
             then(function (results) {
