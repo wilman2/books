@@ -23,7 +23,7 @@ var prod = { name: 'bookinservice',
         'http-sni': { enabled: false },
         'app-alerting': { enabled: false } },
     formation: [ { process: 'web', quantity: 1, size: 'Free' } ],
-    log_drains: [],
+    log_drains: ['syslog://data.logentries.com:13636'],
     domains: [ 'bookinservice.herokuapp.com' ] };
 
 
